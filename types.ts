@@ -7,11 +7,6 @@ export interface IProduct {
     bundle?: boolean;
 }
 
-export interface IDiscount {
-    code: string;
-    discount: number;
-}
-
 export interface IPriceRule {
     code: string;
     quantity: number;

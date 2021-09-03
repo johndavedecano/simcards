@@ -7,10 +7,18 @@ class ShoppingCart {
 
     public promoCode: IPromoCode
 
+    /**
+     * @param rules IPriceRule[]
+     */
     public constructor(rules: IPriceRule[]) {
         this.rules = rules
     }
 
+    /**
+     * 
+     * @param item IProduct
+     * @param promoCode IPromoCode
+     */
     public add(item: ICartItem, promoCode?: IPromoCode) {
         if (promoCode) {
             this.promoCode = promoCode
@@ -36,7 +44,11 @@ class ShoppingCart {
         }
     }
 
-    private _getItems(nextItems) {
+    /**
+     * @param nextItems IProduct[]
+     * @returns IProduct[]
+     */
+    private _getItems(nextItems): IProduct[] {
         let items = Object.values({ ...nextItems })
 
         this.rules.forEach((rule: IPriceRule) => {

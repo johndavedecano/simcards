@@ -3,7 +3,7 @@ import DiscountBundle from './discount_bundle'
 import DiscountPrice from './discount_price'
 import DiscountVolume from './discount_volume'
 import ShoppingCart from './shopping_cart'
-import { IDiscount } from './types'
+import { IPromoCode } from './types'
 
 describe('Test Shopping Cart', () => {
     it('should match case 94.7', () => {
@@ -87,7 +87,7 @@ describe('Test Shopping Cart', () => {
             }),
         ])
 
-        const promoCode: IDiscount = {
+        const promoCode: IPromoCode = {
             code: 'I<3AMAYSIM',
             discount: 10,
         }
